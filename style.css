@@ -1,0 +1,390 @@
+:root
+{
+    --blue : #003561;
+    --black : #141B26;
+    --aku : #292929;
+    --green : #61ff50;
+    --green-black : #0a6400;
+    --red : #ff0000;
+    --white : #FFF;
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+    font-family: 'Tahoma';
+}
+
+body
+{
+    background-color: var(--black);
+    color: var(--white);
+}
+
+header
+{
+    text-align: center;
+    background-color: var(--blue);
+    position: fixed;
+    width: 100%;
+    font-weight: bold;
+    padding: 2%;
+    top: 0;
+}
+
+.title
+{
+    color: var(--green);
+    border-bottom: 1px solid var(--white);
+    font-size: 15pt;
+}
+
+.input-search
+{
+    width: 15%;
+    border: none;
+    border-radius: 0 0 0 10px;
+    padding: 2px;
+}
+
+
+.input-submit
+{
+    margin-left: -5px;
+    border: none;
+    border-radius: 0 10px 0 0;
+    padding: 2px;
+    background-color: var(--green);   
+    color: var(--black); 
+    width: 5%;
+    font-weight: bold;
+}
+
+nav
+{
+    margin-top: 2%;
+}
+
+nav ul
+{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+nav ul li a
+{
+    color: var(--green);
+}
+
+nav ul li a:hover
+{
+    border-bottom: 1px solid var(--white);
+}
+
+.slider
+{
+    margin-top: 10%;
+    display: block;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 65%;
+}
+
+.slider h4
+{
+    margin-top: 20%;
+}
+
+.slides
+{
+    display: flex;
+    width: 50rem;
+    overflow: hidden;
+}
+
+.slides img 
+{
+    border-radius: 10px;
+}
+
+.slide
+{
+    width: 50rem;
+    transition: .5s;
+}
+
+.choose_1:checked ~ .slides > .s1
+{
+    margin-left: -0rem;
+}
+
+.choose_2:checked ~ .slides > .s1
+{
+    margin-left: -50rem;
+}
+
+.overlay 
+{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.overlay:target 
+{
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup 
+{
+    margin: 70px auto;
+    padding: 20px;
+    background: var(--aku);
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
+    transition: all 5s ease-in-out;
+}
+  
+.popup h2 {
+    margin-top: 0;
+    color: var(--white);
+    font-family: 'Tahoma';
+}
+
+.popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000000;
+}
+
+.popup .close:hover 
+{
+    color: var(--red);
+}
+
+.content 
+{
+    max-height: 30%;
+    width: 50%;
+
+}
+
+.title-b
+{
+    margin-left: 10px   
+}
+
+.title-a
+{
+    margin-left: 10px
+}
+
+.title-e
+{
+    margin-left: 10px
+}
+
+.basic
+{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 10%;
+}
+
+.advanced
+{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 10%;    
+}
+
+.expert
+{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.harga
+{
+    color: var(--blue);
+}
+
+.link a
+{
+    color: var(--white);
+    font-weight: bold;
+}
+
+.link a:hover
+{
+    color: var(--green);
+}
+
+.pesan
+{
+    background-color: var(--white);
+    padding: 5%;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.pesan:hover
+{
+    background-color: var(--green);
+    padding: 5%;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.pesan img
+{
+    width: 30px;
+}
+
+.sasa
+{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.tentang
+{
+    display: grid;
+    justify-content: center;
+    margin-top: 10%;
+    font-size: 15pt;
+}
+ 
+.card
+{
+    background-color: var(--blue);
+    padding: 5%;
+    border-radius: 10px;
+    box-shadow: 20px 20px black;
+}
+ 
+.card h1
+{
+    text-shadow: var(--black);
+    text-align: center;
+}
+ 
+html
+{
+    scroll-behavior: smooth;
+}
+ 
+ 
+footer
+{
+    display: grid;
+    justify-content: center;
+    background-color: var(--blue);
+    margin-top: 10%;
+    padding: 2%;
+}
+ 
+.sosmed img 
+{
+    width: 60px;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+ 
+#about
+{
+    text-align: center;
+    padding: 10px;
+}
+
+@media screen and (max-width: 600px) {
+
+    nav ul li a
+    {
+        font-size: 11pt;
+    }
+
+    .slider
+    {
+        display: none;
+    }
+
+    .title-b
+    {
+        padding-top: 6rem;
+    }
+
+    .basic
+    {
+        display: grid;
+        font-size: 10pt;
+    }
+
+    .advanced
+    {
+        display: grid;
+        font-size: 10pt;
+    }
+
+    .expert
+    {
+        display: grid;
+        font-size: 10pt;
+    }
+
+    .link img
+    {
+        width: 30%;
+    }
+
+    .tentang
+    {
+        width: 90%;
+        padding-left: 2rem;
+        font-size: 13pt;
+    }
+
+    .sosmed 
+    {
+        font-size: 10pt;
+        padding-left: 8rem;
+    }
+
+    .sosmed img
+    {
+        width: 15%;
+        margin-left: 13px;
+    }
+
+}    
+
